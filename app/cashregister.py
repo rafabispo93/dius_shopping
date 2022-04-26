@@ -34,8 +34,7 @@ class CashRegister:
                 self.__products[rule.sku] -= self.__products[rule.sku] * (rule.discount/100)
                 for idx, extra in enumerate(rule.extra_products):
                     if rule.sku in extra:
-                        product_unit_price = self.__products[rule.sku] / len(self.__products[rule.sku])
-                        self.__products[rule.sku] -= product_unit_price * extra[rule.sku]
+                        self.__products[rule.sku] = len(self.__products[rule.sku]) * extra[rule.sku]
                     else:
                         for code, number in extra.items():
                             for _ in range(number):

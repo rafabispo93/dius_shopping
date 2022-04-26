@@ -8,9 +8,7 @@ class PricingRule:
     ):
         self.sku = sku
         self.number_products_activation = number_products_activation
-        if discount <= 100:
+        if 100 >= discount > 0:
             self.discount = discount
-        else:
-            raise ValueError('Discount more than 100%')
         self.extra_products = extra_products
 

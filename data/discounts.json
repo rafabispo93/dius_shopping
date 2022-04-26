@@ -1,0 +1,29 @@
+[
+  {
+    "sku": "atv",
+    "discount": 0,
+    "number_products_activation": 3,
+    "extra_products": [
+      {
+        "atv": 1
+      }
+    ]
+  },
+  {
+    "sku": "ipd",
+    "discount": 499.99,
+    "number_products_activation": 5,
+    "extra_products": [
+    ]
+  },
+  {
+    "sku": "mbp",
+    "discount": 0,
+    "number_products_activation": 1,
+    "extra_products": [
+      {
+        "vga": 1
+      }
+    ]
+  }
+]
