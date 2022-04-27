@@ -8,7 +8,8 @@
 ## Running Project
 * To run the project you must first fill the `input.json`, `products.json` and `discounts.json` files inside the `data` folder with the desired inputs.
   * eg:
-products.json
+products.json: This one is the list of products available at the store. The `key` is the `sku` of the item and the value is a list that
+the position`0` is the name of the product and the `position` `1` is the `price`.
 ```json
   {
     "ipd": ["Super iPad", 549.99],
@@ -18,7 +19,12 @@ products.json
   }
 ```
 * eg:
-discounts.json
+discounts.json: This json we have a list of the applicable discounts. Below it's the definition of each `key`:
+  * `sku`: The sku of the item that will have the discount.
+  * `discount`: Is the new price that the product will have if this discount is activated.
+  * `number_products_activation`: How many products of this type need to be scanned to activate the discount.
+  * `extra_products`: A list of free items (`key` is the `sku` of the free item and the `value` is how many of this item) that the user can get in case the discount is activated. 
+
 ```json
   [
     {
@@ -50,7 +56,7 @@ discounts.json
     }
   ]
 ```
-input.json
+input.json: This is a list of the sku of the items that are going to be scanned
 ```json
   ["atv", "ipd", "ipd", "atv", "ipd", "ipd", "ipd"]
 ```
